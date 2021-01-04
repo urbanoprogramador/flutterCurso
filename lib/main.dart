@@ -33,7 +33,7 @@ class _MyStepperState extends State<MyStepper> {
 
   final nombre = TextEditingController();
 
-  FAStepperType _stepperType = FAStepperType.vertical;
+  FAStepperType _stepperType = FAStepperType.horizontal;
 
   next() {
     _currentStep + 1 != _myStep.length
@@ -58,10 +58,10 @@ class _MyStepperState extends State<MyStepper> {
       state: FAStepstate.editing,
       content: Column(
         children: [
-          TextField(
+          TextFormField(
             decoration: InputDecoration(labelText: 'Correo Electronico'),
           ),
-          TextField(
+          TextFormField(
             decoration: InputDecoration(labelText: 'PassWord'),
           )
         ],
@@ -74,10 +74,10 @@ class _MyStepperState extends State<MyStepper> {
       content: Column(
         children: [
           TextFormField(
-            decoration: InputDecoration(labelText: 'Home Address'),
+            decoration: InputDecoration(labelText: 'Home Address 1'),
           ),
           TextFormField(
-            decoration: InputDecoration(labelText: 'Postcode'),
+            decoration: InputDecoration(labelText: 'Postcode 1'),
           )
         ],
       ),
@@ -89,10 +89,10 @@ class _MyStepperState extends State<MyStepper> {
       content: Column(
         children: [
           TextFormField(
-            decoration: InputDecoration(labelText: 'Home Address'),
+            decoration: InputDecoration(labelText: 'Home Address 2'),
           ),
           TextFormField(
-            decoration: InputDecoration(labelText: 'Postcode'),
+            decoration: InputDecoration(labelText: 'Postcode 2'),
           )
         ],
       ),
@@ -104,10 +104,10 @@ class _MyStepperState extends State<MyStepper> {
       content: Column(
         children: [
           TextFormField(
-            decoration: InputDecoration(labelText: 'Home Address'),
+            decoration: InputDecoration(labelText: 'Home Address 3'),
           ),
           TextFormField(
-            decoration: InputDecoration(labelText: 'Postcode'),
+            decoration: InputDecoration(labelText: 'Postcode3'),
           )
         ],
       ),
@@ -119,10 +119,10 @@ class _MyStepperState extends State<MyStepper> {
       content: Column(
         children: [
           TextFormField(
-            decoration: InputDecoration(labelText: 'Home Address'),
+            decoration: InputDecoration(labelText: 'Home Address 4'),
           ),
           TextFormField(
-            decoration: InputDecoration(labelText: 'Postcode'),
+            decoration: InputDecoration(labelText: 'Postcode 4'),
           )
         ],
       ),
@@ -134,10 +134,10 @@ class _MyStepperState extends State<MyStepper> {
       content: Column(
         children: [
           TextFormField(
-            decoration: InputDecoration(labelText: 'Home Address'),
+            decoration: InputDecoration(labelText: 'Home Address 5'),
           ),
           TextFormField(
-            decoration: InputDecoration(labelText: 'Postcode'),
+            decoration: InputDecoration(labelText: 'Postcode 5'),
           )
         ],
       ),
@@ -149,10 +149,10 @@ class _MyStepperState extends State<MyStepper> {
       content: Column(
         children: [
           TextFormField(
-            decoration: InputDecoration(labelText: 'Home Address'),
+            decoration: InputDecoration(labelText: 'Home 9'),
           ),
           TextFormField(
-            decoration: InputDecoration(labelText: 'Postcode'),
+            decoration: InputDecoration(labelText: 'Postcode9'),
           )
         ],
       ),
