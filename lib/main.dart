@@ -16,13 +16,27 @@ void main() {
         // is not restarted.
         primarySwatch: Colors.blue,
       
-      ),  home:new Center(
-          child:new Directionality(
-            textDirection: TextDirection.ltr,
-            child:new Text('hola mundo 21',style:TextStyle(backgroundColor: Colors.white,fontSize: 30,color: Colors.black)),
-          ),
-        )
+      ),  home:MyButton()
        )
     );
 }
 
+
+
+class MyButton extends StatefulWidget {
+  MyButton({Key key}) : super(key: key);
+
+  _MyButtonState createState() => _MyButtonState();
+}
+
+class _MyButtonState extends State<MyButton> {
+
+  @override
+  Widget build(BuildContext context) {
+    final List<String> textos =['holamundo','adios mundo','como estas mudo'];
+
+    return Container(
+      // child: child,
+    );
+  }
+}
