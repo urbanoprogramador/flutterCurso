@@ -1,3 +1,6 @@
+import 'package:cuentas/pages/contact.dart';
+import 'package:cuentas/pages/home.dart';
+import 'package:cuentas/pages/video.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,8 +28,15 @@ class MyTabs extends StatefulWidget {
   _MyTabsState createState() => _MyTabsState();
 }
 
-class _MyTabsState extends State<MyTabs> {
+class _MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin {
   int _indeTab = 0;
+  TabController controllerTab;
+
+  @override
+  void initState() {
+    super.initState();
+    controllerTab = TabController(length: 3, vsync: this);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,14 +46,22 @@ class _MyTabsState extends State<MyTabs> {
           title: Text('Video Tabs'),
           backgroundColor: Colors.orangeAccent,
           bottom: TabBar(
+            controller: controllerTab,
             tabs: [
               Tab(icon: Icon(Icons.home), text: 'home'),
               Tab(icon: Icon(Icons.ondemand_video), text: 'video'),
-              Tab(icon: Icon(Icons.perm_contact_cal), text: 'video')
+              Tab(icon: Icon(Icons.perm_contact_cal), text: 'contacto')
             ],
           ),
         ),
-        body: Container(),
+        body: TabBarView(
+          controller: controllerTab,
+          children: [
+            Home(),
+            Video(),
+            Contact(),
+          ],
+        ),
       ),
     );
   }
