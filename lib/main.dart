@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     title: 'Demo cuentas',
     theme: ThemeData(
       // This is the theme of your application.
@@ -46,6 +47,19 @@ class _MyTabsState extends State<MyTabs> with SingleTickerProviderStateMixin {
           title: Text('Video Tabs'),
           backgroundColor: Colors.orangeAccent,
           bottom: TabBar(
+            indicatorColor: Colors.orange[900],
+            controller: controllerTab,
+            tabs: [
+              Tab(icon: Icon(Icons.home), text: 'home'),
+              Tab(icon: Icon(Icons.ondemand_video), text: 'video'),
+              Tab(icon: Icon(Icons.perm_contact_cal), text: 'contacto')
+            ],
+          ),
+        ),
+        bottomNavigationBar: Material(
+          color: Colors.brown,
+          child: TabBar(
+            indicatorColor: Colors.deepPurple[900],
             controller: controllerTab,
             tabs: [
               Tab(icon: Icon(Icons.home), text: 'home'),

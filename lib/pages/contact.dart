@@ -6,11 +6,12 @@ class Contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.black,
       child: Center(
           child: Column(
         children: [
           Icon(Icons.contact_phone, size: 70, color: Colors.amberAccent),
-          Text('Usted esta en Contactos')
+          Text('Usted esta en Contactos', style: TextStyle(color: Colors.white))
         ],
       )),
     );
